@@ -113,7 +113,8 @@ class _BillPageState extends State<BillPage> {
                   onPressed: () {
                     Navigator.pushNamed(context, '/startpage');
                   },
-                  child: Text('cancel')),
+                  child: Text('cancel',
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500))),
               SizedBox(
                 width: 20,
               ),
@@ -121,7 +122,8 @@ class _BillPageState extends State<BillPage> {
                   onPressed: () {
                     Navigator.pushNamed(context, '/startpage');
                   },
-                  child: Text('Submit')),
+                  child: Text('Submit',
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500))),
             ],
           ),
           SizedBox(height: 40,),

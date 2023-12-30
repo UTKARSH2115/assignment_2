@@ -63,7 +63,8 @@ class _FruitsPageState extends State<FruitsPage> {
             onPressed: () {
               Navigator.pushNamed(context, '/billpage');
             },
-            child: Text('Checkout'),
+            child: Text('Checkout',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
 
 
           ),
