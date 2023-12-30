@@ -1,18 +1,18 @@
 class Constants {
   static const Map<String, int> fruitsMap = {
-    'Mango': 73,
-    'Orange': 66,
-    'PineApple': 54,
-    'Guava': 34,
-    'Avocado': 83
+    'MANGO': 73,
+    'ORANGE': 66,
+    'PINEAPPLE': 54,
+    'GUAVA': 34,
+    'AVOCADO': 83
   };
   static const Map<String, int> vegetablesMap = {
-    'Tomato': 25,
-    'Brinjal': 50,
-    'Onion': 62,
-    'Carrot': 53,
-    'Green Peas': 71,
-    'Cabbage': 37
+    'TOMATO': 25,
+    'BRINJAL': 50,
+    'ONION': 62,
+    'CARROT': 53,
+    'GREEN PEAS': 71,
+    'CABBAGE': 37
   };
 }
 

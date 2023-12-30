@@ -59,9 +59,16 @@ class _FruitsPageState extends State<FruitsPage> {
                   );
                 }),
           ),
+          Container(
+            //color: Colors.blue,
+              height: 300,
+              width: 300,
+              child: Image.asset('lib/pages/fruits.png')),
+
+
           ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/billpage');
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const BillPage()));
             },
             child: Text('Checkout',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),

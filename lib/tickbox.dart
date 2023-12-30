@@ -28,34 +28,35 @@ class _TickBoxState extends State<TickBox> {
 
 
 
-    return Scaffold(
+    return  Container(
+      height: 80,
+        child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
 
-      body: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
+            Checkbox(
+                value: ifClick,
+                onChanged: (value) {
+                 setState(() {
+                   if(value != null) {
+                     ifClick = value;
+                   }
 
-          Checkbox(
-              value: ifClick,
-              onChanged: (value) {
-               setState(() {
-                 if(value != null) {
-                   ifClick = value;
-                 }
+                   if (value == true) {
+                      DataStore.setMapValue(widget.objectName);
+                   }
+                 });
+                },
+            ),
+            Text(widget.objectName , style: TextStyle( fontSize: 20 , color: Colors.black,),),
 
-                 if (value == true) {
-                    DataStore.setMapValue(widget.objectName);
-                 }
-               });
-              },
-          ),
-          Text(widget.objectName , style: TextStyle( fontSize: 20 , color: Colors.black),),
+            Text(correspondingPrice.toString(),style: TextStyle(color: Colors.black54,fontSize: 21),)
 
-          Text(correspondingPrice.toString(),style: TextStyle(color: Colors.black54),)
-
-        ],
+          ],
 
 
-      ),
+        ),
+
 
 
     );

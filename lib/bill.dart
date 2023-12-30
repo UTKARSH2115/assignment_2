@@ -1,3 +1,4 @@
+import 'package:assignment_2/start.dart';
 import 'package:flutter/material.dart';
 import 'const.dart';
 import 'tickbox.dart';
@@ -64,26 +65,29 @@ class _BillPageState extends State<BillPage> {
       ),
       body: Column(
         children: [
+          SizedBox(height: 30,),
           const Text(
-            'Items Summary',
-            style: TextStyle(color: Colors.black),
+            'ITEMS SUMMARY',
+            style: TextStyle(color: Colors.black,fontSize: 20),
           ),
+          SizedBox(height: 30,),
 
           Expanded(
             child: ListView.builder(
               itemCount: array.length,
               itemBuilder: (context, index) {
                 return Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
                       array[index],
-                      style: const TextStyle(color: Colors.black),
+                      style: const TextStyle(color: Colors.black,fontSize: 20),
                     ),
+                    // SizedBox(width: 10,),
 
                     Text(
                       DataStore.getPrice(array[index]).toString(),
-                      style: const TextStyle(color: Colors.black),
+                      style: const TextStyle(color: Colors.black,fontSize: 20),
                     )
                   ],
                 );
@@ -111,7 +115,7 @@ class _BillPageState extends State<BillPage> {
             children: [
               ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/startpage');
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const StartPage()));
                   },
                   child: Text('cancel',
                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500))),
@@ -120,7 +124,7 @@ class _BillPageState extends State<BillPage> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/startpage');
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const StartPage()));
                   },
                   child: Text('Submit',
                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500))),

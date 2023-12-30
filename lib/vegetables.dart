@@ -60,15 +60,23 @@ class _VegetablePageState extends State<VegetablePage> {
                 return TickBox(objectName: currentStat[index]);
               },
             )),
+            Container(
+              //color: Colors.blue,
+                height: 300,
+                width: 300,
+                child: Image.asset('lib/pages/vegetables.png')),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/fruitspage');
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FruitsPage()));
               },
               child: Text('buy fruits',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
             ),
-            SizedBox(height: 40,)
-          ]),
+            SizedBox(height: 40,),
+
+          ]
+      ),
+      
     );
   }
 }

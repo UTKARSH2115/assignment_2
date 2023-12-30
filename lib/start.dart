@@ -8,7 +8,7 @@ class StartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-      
+
         appBar: AppBar(
           backgroundColor: Colors.deepPurple[300],
           title: Center(
@@ -40,43 +40,41 @@ class StartPage extends StatelessWidget {
             ),
           ],
         ),
-      
+
          body: Center(
-           child: SafeArea(
-      
-             child: Column(
-      
+           child:  Column(
+
                 mainAxisAlignment: MainAxisAlignment.end,
                crossAxisAlignment: CrossAxisAlignment.center,
-      
+
                children: [
-      
+
                  Icon(Icons.shopping_bag,size: 80 , color: Colors.grey[600],),
-      
+
                  SizedBox(height: 20,),
                  ElevatedButton(
-      
+
                      onPressed: () {
-                       Navigator.pushNamed(context, '/vegetablespage');
+                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => const VegetablePage()));
                      },
                      child: Text('Start Shopping', style: TextStyle(fontSize: 20,
                          fontWeight: FontWeight.w500),
                      ),
                  ),
                  SizedBox(height: 90)
-      
-      
-      
-      
+
+
+
+
                ],
-      
-      
-      
+
+
+
              ),
-           ),
+
          ),
-      
-      
+
+
       ),
     );
   }
