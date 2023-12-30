@@ -16,7 +16,6 @@ class _VegetablePageState extends State<VegetablePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.deepPurple[300],
         title: Center(
