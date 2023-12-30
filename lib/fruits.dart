@@ -53,7 +53,7 @@ class _FruitsPageState extends State<FruitsPage> {
             child: ListView.builder(
                 itemCount: currentState.length,
                 itemBuilder: (context, index) {
-                  // A bad way to achieve the latest state, a better way is by state management like Providers
+
                   return TickBox(
                     objectName: currentState[index],
                   );
